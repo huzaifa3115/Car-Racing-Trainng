@@ -1,6 +1,5 @@
 import React from 'react';
-import {View, Text, FlatList} from 'react-native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import {View, Text, FlatList, TouchableOpacity} from 'react-native';
 import {Styles, Data} from '../Common';
 
 export default class Track extends React.Component {

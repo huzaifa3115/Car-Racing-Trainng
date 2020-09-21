@@ -1,7 +1,6 @@
 import React from 'react';
-import {View, StyleSheet, Text, Image} from 'react-native';
+import {View, StyleSheet, Image} from 'react-native';
 import {Input, Button} from '../Components';
-import {TouchableOpacity} from 'react-native-gesture-handler';
 import {Styles} from '../Common';
 import Logo from '../images/logo.png';
 import {Navigator, Utils} from '../Utils';
