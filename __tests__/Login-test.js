@@ -9,6 +9,7 @@ import {Login} from '../src/Screens';
 // Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer';
 
-it('renders correctly Login', () => {
-  renderer.create(<Login />);
+it('renders correctly login', () => {
+  const tree = renderer.create(<Login />).toJSON();
+  expect(tree).toMatchSnapshot();
 });

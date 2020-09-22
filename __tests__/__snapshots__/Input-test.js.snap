@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> should match snapshot 1`] = `
+<TextInput
+  allowFontScaling={true}
+  label="name"
+  rejectResponderTermination={true}
+  selectionColor="#428AF8"
+  style={
+    Array [
+      Object {
+        "borderBottomWidth": 0.5,
+        "borderColor": "#BEBEBE",
+        "height": 40,
+        "marginBottom": 20,
+      },
+      undefined,
+    ]
+  }
+  underlineColorAndroid="transparent"
+/>
+`;
