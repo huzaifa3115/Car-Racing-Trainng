@@ -43,7 +43,7 @@ class Utils {
     } else {
       data.push(payload);
     }
-
+    global.userData = payload;
     AsyncStorage.setItem('data', JSON.stringify(data));
   }
 
