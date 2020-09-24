@@ -7,16 +7,16 @@ import {Navigator, Utils} from '../Utils';
 
 export default class Login extends React.Component {
   state = {
-    username: '',
+    email: '',
     password: '',
   };
 
   __onLogin = async () => {
-    const {username, password} = this.state;
-    if (!Utils.isEmpty(username) && !Utils.isEmpty(password)) {
-      let newUser = await Utils.authLogin(username, password);
+    const {email, password} = this.state;
+    if (!Utils.isEmpty(email) && !Utils.isEmpty(password)) {
+      let newUser = await Utils.authLogin(email, password);
       if (newUser) {
-        await Utils.setUserLogin();
+        await Utils.setUserLogin(email);
       } else {
         alert('Invalid name or password');
       }
@@ -35,9 +35,10 @@ export default class Login extends React.Component {
         <Image source={Logo} style={styles.logo} />
         <View style={styles.fieldsContainer}>
           <Input
-            value={this.state.username}
-            onChangeText={(username) => this.setState({username})}
-            placeholder={'Username'}
+            value={this.state.email}
+            onChangeText={(email) => this.setState({email})}
+            placeholder={'Email'}
+            keyboardType={'email-address'}
           />
           <Input
             value={this.state.password}

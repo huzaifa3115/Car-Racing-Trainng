@@ -67,10 +67,11 @@ class Utils {
     return this.isEmpty(user) ? null : user[0];
   }
 
-  async authLogin(username, password) {
+  async authLogin(email, password) {
     let users = await this.getUsers();
+    console.log(users, 'users');
     let newUser = _.filter(users, function (item) {
-      return item.username === username && item.password === password;
+      return item.email === email && item.password === password;
     });
 
     return this.isEmpty(newUser) ? false : newUser;
@@ -81,6 +82,8 @@ class Utils {
     if (users) {
       users.find((o) => o.email === email).isLoggedIn = true;
       await this.updateUsers(users);
+
+      global.userData = users.find((o) => o.email === email);
 
       Navigator.navigateAndReset('Track');
     }

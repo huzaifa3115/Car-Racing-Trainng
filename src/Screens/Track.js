@@ -62,6 +62,7 @@ export default class Track extends React.Component {
   };
 
   render() {
+    // Utils.clearStorage()
     const {data, activeTrack} = this.state;
     return (
       <View style={Styles.mainContainer}>
